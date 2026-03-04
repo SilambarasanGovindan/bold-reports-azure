@@ -182,8 +182,8 @@
             "[resourceId('Microsoft.Web/sites/config', parameters('WebAppName'), 'web')]"
           ],
           "properties": {
-            "RepoUrl": "https://github.com/boldreports/bold-reports-azure.git",
-            "branch": "v12.2.6",
+            "RepoUrl": "https://github.com/SilambarasanGovindan/bold-reports-azure.git",
+            "branch": "Azure-Test",
             "IsManualIntegration": true
           }
         }
