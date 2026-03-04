@@ -183,6 +183,7 @@
         var bulkDownloadUrl = "@Url.Action("BulkDownloadReportFile", "Items")";
         var isSandbox = @Json.Serialize(isSandbox);
         var resourceCreateLimitUrl = "@Url.Action("ResourceCreateLimit", "Items")";
+        var checkParameterExpressionUrl = "@Url.Action("CheckParameterExpression", "Scheduler")";
     </script>
     <script nonce="@Context.Items["ScriptNonce"]">
         var dashboardItemCount = "@itemsCount[ItemType.Report]";

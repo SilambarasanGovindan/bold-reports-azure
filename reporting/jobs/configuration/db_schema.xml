@@ -886,4 +886,24 @@
     <ModifiedDate>ModifiedDate</ModifiedDate>
     <IsActive>IsActive</IsActive>
   </DB_FileDetail>
+  <DB_EmailActivityLog>
+  <DB_TableName>EmailActivityLog</DB_TableName>
+  <Id>Id</Id>
+  <Event>Event</Event>
+  <RecipientEmail>RecipientEmail</RecipientEmail>
+  <SenderEmail>SenderEmail</SenderEmail>
+  <MailSubject>MailSubject</MailSubject>
+  <MailBody>MailBody</MailBody>
+  <CreatedDate>CreatedDate</CreatedDate>
+  <ModifiedDate>ModifiedDate</ModifiedDate>
+  <InitiatedBy>InitiatedBy</InitiatedBy>
+  <UserId>UserId</UserId>
+  <GroupId>GroupId</GroupId>
+  <ItemId>ItemId</ItemId>
+  <CommentId>CommentId</CommentId>
+  <PermissionId>PermissionId</PermissionId>
+  <Status>Status</Status>
+  <StatusMessage>StatusMessage</StatusMessage>
+  <IsActive>IsActive</IsActive>
+  </DB_EmailActivityLog>
 </DB_SyncUMP>

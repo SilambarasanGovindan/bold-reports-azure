@@ -894,6 +894,27 @@ CREATE TABLE {database_name}.BOLDRS_UserSession(
 	PRIMARY KEY (Id)) ROW_FORMAT=DYNAMIC
 ;
 
+CREATE TABLE {database_name}.BOLDRS_EmailActivityLog(
+    Id int NOT NULL AUTO_INCREMENT,
+    Event varchar(255) NOT NULL,
+    RecipientEmail varchar(255) NOT NULL,
+    SenderEmail varchar(255) NOT NULL,
+    MailSubject varchar(255) NOT NULL,
+    MailBody text NULL,
+    CreatedDate datetime NOT NULL,
+    ModifiedDate datetime  NULL,
+    InitiatedBy int NOT NULL,
+    UserId int NULL,
+    GroupId int NULL,
+    ItemId Char(38) NULL,
+    CommentId int NULL,
+    PermissionId int NULL,
+    Status int NOT NULL,
+    StatusMessage text NULL,
+    IsActive tinyint NOT NULL,
+    PRIMARY KEY (Id))
+;
+
 /*INSERT Queries below this section*/ 
 
 INSERT into  {database_name}.BOLDRS_ItemType (Name,IsActive) VALUES ('Category',1)
@@ -2142,6 +2163,15 @@ ALTER TABLE {database_name}.BOLDRS_ReportPartLinkage  ADD FOREIGN KEY(ModifiedBy
 ALTER TABLE {database_name}.BOLDRS_MultiTabReport  ADD FOREIGN KEY(ParentReportId) REFERENCES {database_name}.BOLDRS_Item (Id)
 ;
 ALTER TABLE {database_name}.BOLDRS_MultiTabReport  ADD FOREIGN KEY(ChildReportId) REFERENCES {database_name}.BOLDRS_Item (Id)
+;
+
+ALTER TABLE {database_name}.BOLDRS_EmailActivityLog  ADD  FOREIGN KEY(UserId) REFERENCES {database_name}.BOLDRS_User (Id)
+;
+ALTER TABLE {database_name}.BOLDRS_EmailActivityLog  ADD  FOREIGN KEY(GroupId) REFERENCES {database_name}.BOLDRS_Group (Id)
+;
+ALTER TABLE {database_name}.BOLDRS_EmailActivityLog  ADD  FOREIGN KEY(ItemId) REFERENCES {database_name}.BOLDRS_Item (Id)
+;
+ALTER TABLE {database_name}.BOLDRS_EmailActivityLog  ADD FOREIGN KEY(CommentId) REFERENCES {database_name}.BOLDRS_Comment (Id)
 ;
 
 CREATE  INDEX IX_BOLDRS_ScheduleDetail_ScheduleId ON  {database_name}.BOLDRS_ScheduleDetail (ScheduleId);

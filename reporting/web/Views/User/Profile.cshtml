@@ -48,6 +48,8 @@
         var passwordFailureMessage = "@isPasswordUpdateFailure";
         var isViewerEnabled = @Json.Serialize(ViewBag.IsViewerV2Enabled);
         var isDesignerEnabled = @Json.Serialize(ViewBag.IsDesignerV2Enabled);
+        var isEditProfile = @Json.Serialize(ViewBag.EditProfile);
+        var isEditNotification = @Json.Serialize(ViewBag.EditNotification);
 
         window.onload = function (e) {
             if (successMessage.toLowerCase() === "true" && successMessage != null) {
@@ -67,10 +69,10 @@
         $(document).ready(function () {
             $("#avatar-button-click, #avatar-delete-click").css("display","none");
             $(".ej2-user-preference-toggle-disabled").attr("disabled", true);
-            if (@ViewBag.EditProfile > 0) {
+            if (isEditProfile > 0) {
                 $("#edit").trigger("click");
             }
-            if(@ViewBag.EditNotification > 0){
+            if(isEditNotification > 0){
                 $("#edit-settings").trigger("click");
             }
 
