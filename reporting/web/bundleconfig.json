@@ -15,7 +15,7 @@
       "wwwroot/Styles/scss/pages/notification/user-notification.css",
       "wwwroot/Styles/EssentialJS2/ej2.dropdowntree.min.css"
     ],
-    "integrity": "sha384-Ta1zyBy7vvgZcC4sBazy1fur4Lo2d1v0j2Vs/4nEaMzYwAU/80oaO7x1j/lYniWo"
+    "integrity": "sha384-EVFXw447nyG7/+EVkBE66EQHjN6HAKGiWobIM7HKVeMMdLtOPGDtqUA2d/7Mo+s7"
   },
   {
     "outputFileName": "wwwroot/cdn/scripts/layout.min.js",
@@ -3847,7 +3847,7 @@
       "wwwroot/Scripts/Administration/CorsSettings.js",
       "wwwroot/Scripts/Core/ServerCommon.js"
     ],
-    "integrity": "sha384-hL5es1ILAbMAeKH8446VXyG9G1/3JwYAkutX7r1euDf87Icjx5n1cjx2p7vPXKjS"
+    "integrity": "sha384-8Rcx4NYP2hOoB3AhEy/c353QYc4opp7TN90Alm0P0Y4PXWVsRXq19krDrMNXsxD+"
   },
   {
     "outputFileName": "wwwroot/cdn/scripts/content-security-policy.min.js",

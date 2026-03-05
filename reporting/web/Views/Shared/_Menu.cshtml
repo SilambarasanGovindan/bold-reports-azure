@@ -214,12 +214,15 @@
 
             <li class="li-logout mobile-visible">
                 <img data-src="@(Model +"/images/divider_dark.png")" class="upper-divider" />
-                <a class="" href="@Url.Action("logout", "accounts" )">
-                    <span class="menu-icon-container">
-                        <i class="su su-logout"></i>
-                    </span>
-                    <span class="menu-label">[[[Sign out]]]</span>
-                </a>
+                <form action="@Url.Action("logout", "accounts")" method="post" style="display:inline;">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="profile-menu-action form-logout col-12">
+                        <span class="menu-icon-container">
+                            <i class="su su-logout"></i>
+                        </span>
+                        <span class="menu-label">Sign out</span>
+                    </button>
+                </form>
             </li>
         </ul>
     </nav>

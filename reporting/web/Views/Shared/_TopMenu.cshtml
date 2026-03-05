@@ -287,12 +287,15 @@
 
                         @if (showLogout)
                         {
-                                <li class="sf-sub-menu-separator"></li>
-                            <li class="sub-menu-item">
-                                <a href="@Url.Action("logout", "accounts")">
-                                    [[[Sign out]]]
-                                </a>
-                            </li>
+                            <li class="sf-sub-menu-separator"></li>
+							<li class="sub-menu-item">
+								<form action="@Url.Action("logout", "accounts")" method="post" style="display:inline;">
+									@Html.AntiForgeryToken()
+									<button type="submit" class="profile-menu-action form-logout col-12">
+										Sign out
+									</button>
+								</form>
+							</li>
                         }
                     </ul>
                 </li>
