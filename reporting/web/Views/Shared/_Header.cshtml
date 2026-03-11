@@ -77,9 +77,13 @@
                     <a href="@Url.Action("ProfilePage", "User")" class="profile-menu-action col-12">
                         [[[Edit Profile]]]
                     </a>
-                    <a href="@Url.Action("logout", "accounts")" class="profile-menu-action col-12">
-                        [[[Sign out]]]
-                    </a>
+                    <form action="@Url.Action("logout", "accounts")" method="post" style="display:inline;">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="profile-menu-action form-logout col-12">
+                            Sign out
+                        </button>
+                    </form>
+
                     <a class="profile-menu-action col-12 separator bottom"></a>
                 </div>
             </div>
